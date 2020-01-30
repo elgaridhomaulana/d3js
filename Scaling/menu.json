@@ -1,0 +1,37 @@
+[
+    {
+        "name": "veg soup",
+        "orders": 200,
+        "color": "red"
+    },
+    {
+        "name": "veg curry",
+        "orders": 600,
+        "color": "yellow"
+    },
+    {
+        "name": "veg pasta",
+        "orders": 200,
+        "color": "green"
+    },
+    {
+        "name": "veg surprise",
+        "orders": 900,
+        "color": "blue"
+    },
+    {
+        "name": "veg rice",
+        "orders": 1500,
+        "color": "purple"
+    },
+    {
+        "name": "veg topping",
+        "orders": 2000,
+        "color": "violet"
+    },
+    {
+        "name": "vegetables",
+        "orders": 1800,
+        "color": "magenta"
+    }
+]
