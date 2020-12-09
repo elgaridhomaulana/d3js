@@ -2,36 +2,41 @@
     {
         "name": "veg soup",
         "orders": 200,
-        "color": "red"
+        "color": "orange"
     },
     {
         "name": "veg curry",
         "orders": 600,
-        "color": "yellow"
+        "color": "orange"
     },
     {
         "name": "veg pasta",
         "orders": 200,
-        "color": "green"
+        "color": "orange"
     },
     {
         "name": "veg surprise",
         "orders": 900,
-        "color": "blue"
+        "color": "orange"
     },
     {
         "name": "veg rice",
         "orders": 1500,
-        "color": "purple"
+        "color": "orange"
     },
     {
         "name": "veg topping",
         "orders": 2000,
-        "color": "violet"
+        "color": "orange"
     },
     {
         "name": "vegetables",
         "orders": 1800,
-        "color": "magenta"
+        "color": "orange"
+    },
+    {
+        "name": "pempek palembang",
+        "orders": 2100,
+        "color": "orange"
     }
 ]
