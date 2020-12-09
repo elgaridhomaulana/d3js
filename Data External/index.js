@@ -1,6 +1,9 @@
 const svg = d3.select('svg')
 
+// json untuk membaca file json, then untuk proses ansychronous job yang akan mengembalikan promise
 d3.json('planets.json').then(data => {
+
+    // join the data
     const circs = svg.selectAll('circle')
         .data(data)
 
