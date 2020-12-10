@@ -17,6 +17,7 @@ const pie = d3.pie()
     .sort(null)
     .value(d => d.cost); // nilai yang dievaluasi untuk membuat pie angle
 
+// arc akan mengubah pie data menjadi sebuah path
 const arcPath = d3.arc()
     .outerRadius(dims.radius)
     .innerRadius(dims.radius / 2);
@@ -45,21 +46,25 @@ const update = (data) => {
     paths.enter()
         .append('path')
         .attr('class', 'arc')
-        .attr('d', arcPath)
+        .attr('d', arcPath) // ingat bahwa path membutuhkan attribut d untuk bisa menggambarkan path tersebut
         .attr('stroke', '#fff')
         .attr('stroke-width', 3)
         .attr('fill', d => color(d.data.name) );
 }
 
-// data array
+// data array kosong untuk menyimpan data
 var data = [];
 
+// koneksi ke database secara realtime
 db.collection('expenses').onSnapshot(res => {
     
+    // setiap perubahan terdapat di dalam docChanges
     res.docChanges().forEach(change => {
         
+        // menyimpan doc yang berisi data dan id
         const doc = {...change.doc.data(), id: change.doc.id};
 
+        // switch untuk change type
         switch (change.type) {
 			case 'added':
 				data.push(doc);
@@ -77,6 +82,7 @@ db.collection('expenses').onSnapshot(res => {
         
     })
 
+    // update data ketika variable data berubah
     update(data)
 })
 
